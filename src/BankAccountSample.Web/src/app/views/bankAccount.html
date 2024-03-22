@@ -1,0 +1,28 @@
+<h1 id="tableLabel">Weather forecast</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<p *ngIf="!bankAccounts"><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> for more details.</em></p>
+
+<table *ngIf="bankAccounts">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Description</th>
+        <th>Date</th>
+        <th>Value</th>
+        <th>Detached</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let bankAccount of bankAccounts">
+        <td>{{ bankAccount.Id }}</td>
+        <td>{{ bankAccount.Description }}</td>
+        <td>{{ bankAccount.Date }}</td>
+        <td>{{ bankAccount.Value }}</td>
+        <td>{{ bankAccount.Detached }}</td>
+        <td>{{ bankAccount.Status }}</td>
+      </tr>
+    </tbody>
+</table>
